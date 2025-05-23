@@ -9,6 +9,7 @@ import { Button } from "./components/Button.tsx";
 import { Input } from "./components/Input.tsx";
 import { Container } from "./components/Container.tsx";
 import { LoggedIn } from "./components/state/LoggedIn.tsx";
+import { User } from "./components/state/User.tsx";
 
 function App() {
   const personName = {
@@ -53,6 +54,9 @@ function App() {
       <div>
         <Container styles={{ border: "1px solid black", padding: "1rem" }} />
         <LoggedIn />
+        <div>
+          <User></User>
+        </div>
       </div>
     </>
   );
