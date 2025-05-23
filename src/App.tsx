@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Greet name="hi" messageCount={20} />
+        <Greet name="hi" />
         <Person name={personName} />
         <PersonList names={nameList} />
       </div>
