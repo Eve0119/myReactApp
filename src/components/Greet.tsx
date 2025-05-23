@@ -4,7 +4,11 @@ interface GreetProps {
   isLoggedIn?: boolean;
 }
 
-export const Greet = ({ name, messageCount, isLoggedIn }: GreetProps) => {
+export const Greet = ({
+  name,
+  messageCount,
+  isLoggedIn = true,
+}: GreetProps) => {
   return (
     <div>
       <h2>
