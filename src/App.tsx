@@ -5,6 +5,8 @@ import PersonList from "./components/PersonList";
 import Status from "./components/Status.tsx";
 import { Heading } from "./components/Heading.tsx";
 import { Oscar } from "./components/Oscar.tsx";
+import { Button } from "./components/Button.tsx";
+import { Input } from "./components/Input.tsx";
 
 function App() {
   const personName = {
@@ -37,6 +39,14 @@ function App() {
         <Status status="success" />
         <Heading>PlaceHolder Text</Heading>
         <Oscar>Oscar Goes to Leonardo</Oscar>
+      </div>
+      <div>
+        <Button
+          handleClick={(event, id) => {
+            console.log("Button Clicked", event, id);
+          }}
+        ></Button>
+        <Input value="" handleChange={(event) => console.log(event)} />
       </div>
     </>
   );
