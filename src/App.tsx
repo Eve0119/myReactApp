@@ -2,6 +2,7 @@ import "./App.css";
 import { Greet } from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status.tsx";
 
 function App() {
   const personName = {
@@ -24,11 +25,16 @@ function App() {
     },
   ];
   return (
-    <div className="App">
-      <Greet name="hi" messageCount={20} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
-    </div>
+    <>
+      <div className="App">
+        <Greet name="hi" messageCount={20} />
+        <Person name={personName} />
+        <PersonList names={nameList} />
+      </div>
+      <div className="App">
+        <Status status="success" />
+      </div>
+    </>
   );
 }
 
