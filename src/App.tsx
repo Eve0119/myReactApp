@@ -3,6 +3,8 @@ import { Greet } from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status.tsx";
+import { Heading } from "./components/Heading.tsx";
+import { Oscar } from "./components/Oscar.tsx";
 
 function App() {
   const personName = {
@@ -33,6 +35,8 @@ function App() {
       </div>
       <div className="App">
         <Status status="success" />
+        <Heading>PlaceHolder Text</Heading>
+        <Oscar>Oscar Goes to Leonardo</Oscar>
       </div>
     </>
   );
