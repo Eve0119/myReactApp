@@ -33,30 +33,8 @@ function App() {
   ];
   return (
     <>
-      <div className="App">
-        <Greet name="hi" />
-        <Person name={personName} />
-        <PersonList names={nameList} />
-      </div>
-      <div className="App">
-        <Status status="success" />
-        <Heading>PlaceHolder Text</Heading>
-        <Oscar>Oscar Goes to Leonardo</Oscar>
-      </div>
       <div>
-        <Button
-          handleClick={(event, id) => {
-            console.log("Button Clicked", event, id);
-          }}
-        ></Button>
-        <Input value="" handleChange={(event) => console.log(event)} />
-      </div>
-      <div>
-        <Container styles={{ border: "1px solid black", padding: "1rem" }} />
-        <LoggedIn />
-        <div>
-          <User></User>
-        </div>
+        <User></User>
       </div>
     </>
   );

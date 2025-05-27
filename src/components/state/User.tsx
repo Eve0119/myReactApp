@@ -6,7 +6,7 @@ type AuthUserProps = {
 };
 
 export const User = () => {
-  const [user, setUser] = useState<AuthUserProps | null>(null);
+  const [user, setUser] = useState<AuthUserProps | null>({} as AuthUserProps);
 
   const handleLogin = () => {
     setUser({
