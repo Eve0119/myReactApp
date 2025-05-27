@@ -9,10 +9,12 @@ import { Button } from "./components/Button.tsx";
 import { Input } from "./components/Input.tsx";
 import { Container } from "./components/Container.tsx";
 import { LoggedIn } from "./components/state/LoggedIn.tsx";
-import { User } from "./components/state/User.tsx";
+//import { User } from "./components/state/User.tsx";
 import { Counter } from "./components/state/Counter.tsx";
 import { ThemeContextProvider } from "./components/context/ThemeContext.tsx";
 import { Box } from "./components/context/Box.tsx";
+import { User } from "./components/context/User.tsx";
+import { UserContextProvider } from "./components/context/UserContext.tsx";
 
 function App() {
   const personName = {
@@ -46,6 +48,11 @@ function App() {
         <ThemeContextProvider>
           <Box />
         </ThemeContextProvider>
+      </div>
+      <div>
+        <UserContextProvider>
+          <User></User>
+        </UserContextProvider>
       </div>
     </>
   );
