@@ -10,6 +10,7 @@ import { Input } from "./components/Input.tsx";
 import { Container } from "./components/Container.tsx";
 import { LoggedIn } from "./components/state/LoggedIn.tsx";
 import { User } from "./components/state/User.tsx";
+import { Counter } from "./components/state/Counter.tsx";
 
 function App() {
   const personName = {
@@ -35,6 +36,9 @@ function App() {
     <>
       <div>
         <User></User>
+      </div>
+      <div>
+        <Counter></Counter>
       </div>
     </>
   );
