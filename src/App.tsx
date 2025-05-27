@@ -11,6 +11,8 @@ import { Container } from "./components/Container.tsx";
 import { LoggedIn } from "./components/state/LoggedIn.tsx";
 import { User } from "./components/state/User.tsx";
 import { Counter } from "./components/state/Counter.tsx";
+import { ThemeContextProvider } from "./components/context/ThemeContext.tsx";
+import { Box } from "./components/context/Box.tsx";
 
 function App() {
   const personName = {
@@ -39,6 +41,11 @@ function App() {
       </div>
       <div>
         <Counter></Counter>
+      </div>
+      <div>
+        <ThemeContextProvider>
+          <Box />
+        </ThemeContextProvider>
       </div>
     </>
   );
