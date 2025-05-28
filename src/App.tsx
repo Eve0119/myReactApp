@@ -15,6 +15,8 @@ import { ThemeContextProvider } from "./components/context/ThemeContext.tsx";
 import { Box } from "./components/context/Box.tsx";
 import { User } from "./components/context/User.tsx";
 import { UserContextProvider } from "./components/context/UserContext.tsx";
+import { Private } from "./components/auth/Private.tsx";
+import { Profile } from "./components/auth/Profile.tsx";
 
 function App() {
   const personName = {
@@ -54,6 +56,7 @@ function App() {
           <User></User>
         </UserContextProvider>
       </div>
+      <Private isLoggedIn={true} component={Profile} />
     </>
   );
 }
