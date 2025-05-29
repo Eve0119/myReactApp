@@ -17,6 +17,7 @@ import { User } from "./components/context/User.tsx";
 import { UserContextProvider } from "./components/context/UserContext.tsx";
 import { Private } from "./components/auth/Private.tsx";
 import { Profile } from "./components/auth/Profile.tsx";
+import { List } from "./components/generics/List.tsx";
 
 function App() {
   const personName = {
@@ -57,6 +58,14 @@ function App() {
         </UserContextProvider>
       </div>
       <Private isLoggedIn={true} component={Profile} />
+      <div>
+        <List
+          items={["Apple", "Mango", "Banana"]}
+          onClick={(item) => {
+            console.log(item);
+          }}
+        ></List>
+      </div>
     </>
   );
 }
