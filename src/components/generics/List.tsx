@@ -1,9 +1,9 @@
-type ListProps = {
-  items: string[];
-  onClick: (value: string) => void;
+type ListProps<T> = {
+  items: T[];
+  onClick: (value: T) => void;
 };
 
-export const List = ({ items, onClick }: ListProps) => {
+export const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
   return (
     <div>
       <h2>List of Items</h2>
@@ -15,7 +15,7 @@ export const List = ({ items, onClick }: ListProps) => {
               onClick(item);
             }}
           >
-            {item}
+            {JSON.stringify(item)}
           </div>
         );
       })}
